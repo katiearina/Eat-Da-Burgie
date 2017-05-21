@@ -5,7 +5,8 @@ font-family: 'Ribeye', cursive;*/
 body {
     text-align: center;
     font-family: 'Oldenburg', cursive;
-    background-color: #E1454F;
+    background-color: #F6A09E;
+    /*background-color: #E1454F;*/
 }
 
 h1 {
@@ -21,12 +22,12 @@ h1 {
 
 h2 {
     font-family: 'Ribeye', cursive;
-    color: #69425A;
+    color: #E1454F;
 }
 
 ul {
     color: #69425A;
-    background-color: #F6A09E;
+    background-color: #EBEBBB;
     /*background-color: #EBEBBB;*/
     border-style: solid;
     border-color: #C5DCCE;
