@@ -5,12 +5,33 @@ font-family: 'Ribeye', cursive;*/
 body {
     text-align: center;
     font-family: 'Oldenburg', cursive;
+    background-color: #E1454F;
 }
 
 h1 {
     font-family: 'Ribeye Marrow', cursive;
+    color: #B92D3E;
+    /*background-color: #E1454F;*/
+    /*text-shadow:
+		-1px -1px 0 #69425A,
+		1px -1px 0 #69425A,
+		-1px 1px 0 #69425A,
+		1px 1px 0 #69425A;*/
 }
 
 h2 {
-    font-family: 'Ribeye', cursive;*/
+    font-family: 'Ribeye', cursive;
+    color: #69425A;
+}
+
+ul {
+    color: #69425A;
+    background-color: #F6A09E;
+    /*background-color: #EBEBBB;*/
+    border-style: solid;
+    border-color: #C5DCCE;
+}
+
+img {
+    /*background-color: #F6A09E;*/
 }
