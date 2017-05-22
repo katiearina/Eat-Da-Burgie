@@ -21,14 +21,33 @@
     <!-- Begin Second Row -->
     <div class="row">
 
+        <div class="col-12">
+
+            <h5>The Ditto: Create your own burger!</h5>
+                <form class="create-update-form" action="/" method="POST">
+                    <div class="form-group">
+                        <label for="newBurger"></label>
+                        <input type="text" id="newBurger" name="burger_name">
+                    </div>             
+                    <button type="submit" class="btn btn-primary btn-sm">Order It!</button>
+                </form>
+                
+        </div>
+
+    <!-- End Second Row -->
+    </div>
+
+    <!-- Begin Third Row -->
+    <div class="row">
+
         <div class="col-6">
             <h5>Try One of These!</h5>
                 {{#each burgers}}
-                    {{#if !this.devoured}}
+                    {{#unless this.devoured}}
                     <p>
                         {{this.burger_name}}
                     </p>
-                    {{/if}}
+                    {{/unless}}
                 {{/each}}
         </div>
 
@@ -43,7 +62,7 @@
                 {{/each}}
         </div>
 
-    <!-- End First Row -->
+    <!-- End Third Row -->
     </div>
 
 <!-- End Page Container -->

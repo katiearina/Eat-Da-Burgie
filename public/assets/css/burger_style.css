@@ -1,7 +1,3 @@
-/*font-family: 'Oldenburg', cursive;
-font-family: 'Ribeye Marrow', cursive;
-font-family: 'Ribeye', cursive;*/
-
 body {
     text-align: center;
     font-family: 'Oldenburg', cursive;
@@ -30,6 +26,7 @@ ul, p {
     background-color: #EBEBBB;
     border-style: solid;
     border-color: #C5DCCE;
+    padding: 10px;
 }
 
 .row {
