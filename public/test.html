@@ -27,65 +27,55 @@
 
 	<body>
 
+        <!-- Begin Page Container -->
         <div class="container" id="wrap">
 
-                    <img src="./assets/img/burgie.png">
+            <!-- Burgie Header -->
+            <img src="./assets/img/burgie.png">
 
+            <!-- Begin First Row -->
             <div class="row">
-
-                <!--Intentionally Empty Column -->
-                <!--<div class="col-1">
-                </div>-->
 
                 <div class="col-12">
 
                     <h1>Welcome to Burgie's AdoraBurger!</h1>
 
                     <h2>May is Pokémon Burger Month!</h2>
-                    <!--<h5>Select a themed burger to try!</h5>-->
 
                 </div>
 
-                <!--Intentionally Empty Column -->
-                <!--<div class="col-1">
-                </div>-->
-
-            <!--End First Row-->
+            <!-- End First Row -->
             </div>
 
-            <!--Begin Second Row-->
+            <!-- Begin Second Row -->
             <div class="row">
-
-                <!--Intentionally Empty Column -->
-                <!--<div class="col-1">
-                </div>-->
 
                 <div class="col-6">
                     <h5>Try One of These!</h5>
-                        <p>Kitten One</p>
-                        <p>Kitten One</p>
-                        <p>Kitten One</p>
+                        {{#each burgers}}
+                            {{#if !this.devoured}}
+                            <p>
+                                {{this.burger_name}}
+                            </p>
+                            {{/if}}
+                        {{/each}}
                 </div>
-
-                <!--Intentionally Empty Column -->
-                <!--<div class="col-1">
-                </div>-->
 
                 <div class="col-6">
                     <h5>Consumed, But Not Forgotten</h5>
-                        <p>Kitten One</p>
-                        <p>Kitten One</p>
-                        <p>Kitten One</p>
+                        {{#each burgers}}
+                            {{#if this.devoured}}
+                            <p>
+                                {{this.burger_name}}
+                            </p>
+                            {{/if}}
+                        {{/each}}
                 </div>
 
-                <!--Intentionally Empty Column -->
-                <!--<div class="col-1">
-                </div>-->
-
-            <!--End First Row-->
+            <!-- End First Row -->
             </div>
 
-
+        <!-- End Page Container -->
         </div>
 
 	</body>
