@@ -5,34 +5,36 @@ font-family: 'Ribeye', cursive;*/
 body {
     text-align: center;
     font-family: 'Oldenburg', cursive;
-    background-color: #F6A09E;
-    /*background-color: #E1454F;*/
+    background-color: #E1454F;
 }
 
 h1 {
     font-family: 'Ribeye Marrow', cursive;
     color: #B92D3E;
-    /*background-color: #E1454F;*/
-    /*text-shadow:
-		-1px -1px 0 #69425A,
-		1px -1px 0 #69425A,
-		-1px 1px 0 #69425A,
-		1px 1px 0 #69425A;*/
+    font-size: 52px;
+    text-shadow:
+		-1px -1px 0 #C5DCCE,
+		1px -1px 0 #C5DCCE,
+		-1px 1px 0 #C5DCCE,
+		1px 1px 0 #C5DCCE;
 }
 
 h2 {
     font-family: 'Ribeye', cursive;
-    color: #E1454F;
+    color: #69425A;
+    text-decoration: underline;
 }
 
-ul {
+ul, p {
     color: #69425A;
     background-color: #EBEBBB;
-    /*background-color: #EBEBBB;*/
     border-style: solid;
     border-color: #C5DCCE;
 }
 
-img {
-    /*background-color: #F6A09E;*/
+.row {
+    margin-top: 10px;
+    background-color: #F6A09E;
+    padding: 10px 10px 10px 10px;
+    border: 5px solid #B92D3E;
 }
