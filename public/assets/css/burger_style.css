@@ -24,7 +24,7 @@ h2 {
 ul, p {
     color: #69425A;
     background-color: #EBEBBB;
-    border: 1px solid #C5DCCE;
+    border: 2px solid #C5DCCE;
 }
 
 p {
@@ -49,4 +49,8 @@ p {
 
 #wrap {
     margin-bottom: 50px;
+}
+
+#testWrap {
+    margin-top: 50px;
 }

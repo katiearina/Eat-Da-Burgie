@@ -12,9 +12,9 @@ var orm = {
             console.log(query.sql);
         });
     },
-    insertOne: function(table, column, callback) {
-        var queryString = "INSERT INTO ?? SET ??";
-        var query = connection.query(queryString, [table, column], function (err, result) {
+    insertOne: function(table, column, values, callback) {
+        var queryString = "INSERT INTO ?? SET ?? = ?";
+        var query = connection.query(queryString, [table, column, values], function (err, result) {
             if (err) throw err;
             // console.log(result);
             callback(result);
@@ -22,8 +22,8 @@ var orm = {
         });
     },
     updateOne: function(table, column, condition, callback) {
-        var queryString = "UPDATE ?? SET ?? WHERE ??";
-        var query = connection.query(queryString, [table, column, condition], function (err, result) {
+        var queryString = "UPDATE ?? SET ?? = ?? WHERE ??";
+        var query = connection.query(queryString, [table, column, values, condition], function (err, result) {
             if (err) throw err;
             // console.log(result);
             callback(result);
