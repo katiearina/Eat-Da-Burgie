@@ -76,7 +76,7 @@ ul, .card-block, .teststyling {
     margin-top: 15px;
 }
 
-a, a:link, a:active {
+a, a:link, a:active, a:visited {
     text-decoration: none;
     color: #69425A;
 }
