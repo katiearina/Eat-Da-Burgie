@@ -5,7 +5,7 @@
     <img src="./assets/img/burgie.png">
 
     <!-- Begin First Row -->
-    <div class="row">
+    <div class="row styledrow">
 
         <div class="col-12">
 
@@ -19,17 +19,15 @@
     </div>
 
     <!-- Begin Second Row -->
-    <div class="row">
+    <div class="row styledrow">
 
         <div class="col-12">
 
-            <h5>The Ditto: Create your own burger!</h5>
+            <h4>The Ditto: Create your own burger!</h4>
+
                 <form class="create-update-form" action="/" method="POST">
-                    <div class="form-group">
-                        <label for="newBurger"></label>
                         <input type="text" id="newBurger" name="burger_name">
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-sm">Order It!</button>
+                        <button type="submit" class="btn btn-secondary btn-sm">Order It!</button>
                 </form>
                 
         </div>
@@ -38,26 +36,32 @@
     </div>
 
     <!-- Begin Third Row -->
-    <div class="row">
+    <div class="row styledrow">
 
-        <div class="col-6">
+        <div class="col-6 card">
             <h5>Try One of These!</h5>
                 {{#each burgers}}
                     {{#unless this.devoured}}
-                    <p>
-                        {{this.burger_name}}
-                    </p>
+                    <div class="card-block">
+                        <p class="card-title text-center"> {{this.burger_name}} </p>
+
+                        <form action="/{{this.id}}?_method=PUT" method="POST" class="card-subtitle">
+                            <input type="hidden" name="devoured" value="1">
+                            <button type="submit" class="btn btn-secondary btn-sm">I'll Take This One!</button>
+                        </form>  
+
+                    </div>
                     {{/unless}}
                 {{/each}}
         </div>
 
-        <div class="col-6">
+        <div class="col-6 card">
             <h5>Consumed, But Not Forgotten</h5>
                 {{#each burgers}}
                     {{#if this.devoured}}
-                    <p>
-                        {{this.burger_name}}
-                    </p>
+                    <div class="card-block" id="eaten">
+                        <p class="card-title text-center"> {{this.burger_name}} </p>
+                    </div>
                     {{/if}}
                 {{/each}}
         </div>

@@ -21,21 +21,27 @@ h2 {
     text-decoration: underline;
 }
 
-ul, p {
+.styledrow {
+    margin-top: 10px;
+    background-color: #F6A09E;
+    padding: 15px;
+    border: 5px solid #B92D3E;
+}
+
+.card {
+    background-color: #F6A09E;
+    border: none;
+}
+
+ul, .card-block, .teststyling {
     color: #69425A;
     background-color: #EBEBBB;
     border: 2px solid #C5DCCE;
 }
 
-p {
+.card-block, .teststyling {
     padding: 10px;
-}
-
-.row {
-    margin-top: 10px;
-    background-color: #F6A09E;
-    padding: 10px 10px 10px 10px;
-    border: 5px solid #B92D3E;
+    margin: 10px;
 }
 
 .embed-responsive {
@@ -53,4 +59,37 @@ p {
 
 #testWrap {
     margin-top: 50px;
+    margin-bottom: 50px;
 }
+
+#newBurger {
+    min-width: 350px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+#eaten {
+    max-height: 100px;
+}
+
+#burgieheader {
+    margin-top: 15px;
+}
+
+a, a:link, a:active {
+    text-decoration: none;
+    color: #69425A;
+}
+
+a:hover {
+    color: #E1454F;
+}
+
+h5 {
+    text-decoration: underline;
+}
+
+h4 {
+    margin: 10px;
+}
+

@@ -28,9 +28,9 @@ router.post("/", function(request, response) {
 });
 
 router.put("/:id", function(request, response) {
-    var condition = "id = " + request.params.id;
-    console.log(condition);
-    burger.updateOne("devoured", 1, condition, function(data) {
+    // var condition = "id = " + request.params.id;
+    // console.log(condition);
+    burger.updateOne("devoured", request.body.devoured, "id", request.params.id, function(data) {
             var handlebarsObject = {
                 burgers: data
             };

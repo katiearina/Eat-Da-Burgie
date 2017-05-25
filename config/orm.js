@@ -21,13 +21,14 @@ var orm = {
             console.log(query.sql);
         });
     },
-    updateOne: function(table, column, condition, callback) {
-        var queryString = "UPDATE ?? SET ?? = ?? WHERE ??";
-        var query = connection.query(queryString, [table, column, values, condition], function (err, result) {
+    updateOne: function(table, column, values, id, thisId, callback) {
+        var queryString = "UPDATE ?? SET ?? = ? WHERE ?? = ?";
+        var query = connection.query(queryString, [table, column, values, id, thisId], function (err, result) {
+            console.log(query.sql); 
             if (err) throw err;
             // console.log(result);
             callback(result);
-            console.log(query.sql);           
+            // console.log(query.sql);           
         });
     }
 };
