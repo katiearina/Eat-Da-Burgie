@@ -6,6 +6,7 @@ var router = express.Router();
 var burger = require("../models/burger.js");
 // =============================================================
 
+// GET request
 router.get("/", function(request, response) {
     burger.selectAll(function(data) {
         var handlebarsObject = {
@@ -16,6 +17,7 @@ router.get("/", function(request, response) {
         });
 });
 
+// POST request
 router.post("/", function(request, response) {
     burger.insertOne("burger_name", request.body.burger_name,
         function(data) {
@@ -27,9 +29,8 @@ router.post("/", function(request, response) {
     });
 });
 
+// PUT request
 router.put("/:id", function(request, response) {
-    // var condition = "id = " + request.params.id;
-    // console.log(condition);
     burger.updateOne("devoured", request.body.devoured, "id", request.params.id, function(data) {
             var handlebarsObject = {
                 burgers: data

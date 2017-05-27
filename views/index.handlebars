@@ -25,6 +25,7 @@
 
             <h4>The Ditto: Create your own burger!</h4>
 
+                {{!-- POST request to create a new burger --}}
                 <form class="create-update-form" action="/" method="POST">
                         <input type="text" id="newBurger" name="burger_name">
                         <button type="submit" class="btn btn-secondary btn-sm">Order It!</button>
@@ -38,6 +39,7 @@
     <!-- Begin Third Row -->
     <div class="row styledrow">
 
+        {{!-- This column shows all burgers with the status of devoured = false --}}
         <div class="col-6 card">
             <h5>Try One of These!</h5>
                 {{#each burgers}}
@@ -45,6 +47,7 @@
                     <div class="card-block">
                         <p class="card-title text-center"> {{this.burger_name}} </p>
 
+                        {{!-- PUT request to change the 'devoured' status of a burger from false to true --}}
                         <form action="/{{this.id}}?_method=PUT" method="POST" class="card-subtitle">
                             <input type="hidden" name="devoured" value="1">
                             <button type="submit" class="btn btn-secondary btn-sm">I'll Take This One!</button>
@@ -55,6 +58,7 @@
                 {{/each}}
         </div>
 
+        {{!-- This column shows all burgers with the status devoured = true --}}
         <div class="col-6 card">
             <h5>Consumed, But Not Forgotten</h5>
                 {{#each burgers}}
