@@ -85,6 +85,16 @@ a:hover {
     color: #E1454F;
 }
 
+.btn {
+    background-color: white;
+    font-family: 'Oldenburg', cursive;
+}
+
+.btn:hover {
+    background-color: #C5DCCE;
+    font-family: 'Oldenburg', cursive;
+}
+
 h5 {
     text-decoration: underline;
 }
@@ -93,4 +103,3 @@ h4 {
     margin-top: 10px;
     margin-bottom: 20px;
 }
-
